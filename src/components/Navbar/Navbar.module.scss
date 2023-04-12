@@ -1,0 +1,136 @@
+.Navbar {
+    background-color: black;
+    height: 60px;
+    background-color: #262c36;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    position: sticky;
+    @media (min-width: 1440px) {
+        font-size: calc(14px + 0.4vw);
+    }
+    @media (max-width: 1440px) {
+        font-size: 14px;
+    }
+    // @media (max-width: 768px) {
+    //     font-size: 13px;
+    // }
+    // @media (max-width: 576px) {
+    //     font-size: 14px;
+    // }
+
+    .left {
+        gap: 0.5em;
+        .icon {
+            color: white;
+            margin-right: 10px;
+            cursor: pointer;
+            @media only screen and (max-width: 1025px) {
+                display: none;
+            }
+        }
+        .companyicon {
+            object-fit: contain;
+            height: 30px;
+            @media only screen and (min-width: 1025px) {
+                height: 35px;
+            }
+        }
+        .text {
+            font-weight: 600;
+            color: white;
+            font-size: 18px;
+            @media only screen and (min-width: 1025px) {
+                font-size: 20px;
+            }
+            @media only screen and (max-width: 350px) {
+                display: none;
+            }
+        }
+        .browse{
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 15px;
+            color: #eeeeee;
+            cursor: pointer;
+        }
+    }
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+        .browse{
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            font-size: 11px;
+            color: #eeeeee;
+            cursor: pointer;
+        }
+        .searchwrapper {
+            background-color: #15181e;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 22px;
+            height: 35px;
+            margin-left: 10px;
+            padding: 0 15px;
+            width: 350px;
+            z-index: 5;
+
+            .input {
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                font-size: 14px;
+                color: white;
+
+                &::placeholder {
+                    color: gray;
+                    font-weight: 600;
+                }
+            }
+            svg {
+                cursor: pointer;
+            }
+        }
+        .noti {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .noticount {
+                background-color: #f3912e;
+                border-radius: 5px;
+                font-size: 10px;
+                color: white;
+                margin-top: -10px;
+                padding: 3px 4px;
+                text-align: center;
+            }
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+            color: white;
+            .img {
+                object-fit: contain;
+            }
+        }
+        .pointswrapper {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            .text {
+                color: #f3912e;
+                font-weight: 600;
+            }
+        }
+    }
+}
