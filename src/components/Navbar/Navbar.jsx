@@ -6,12 +6,11 @@ import { IoCompassOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import icon from "../../assests/icon.png";
 
-const Navbar = () => {
+const Navbar = ({open, setOpen}) => {
     return (
         <div className={styles.Navbar}>
-            <div
-                className={`d-flex justify-content-start align-items-center ${styles.left}`}>
-                <HiMenuAlt2 size={"35px"} className={`${styles.icon}`} />
+            <div className={`d-flex justify-content-start align-items-center ${styles.left}`}>
+                <HiMenuAlt2 size={"30px"} className={`${styles.icon}`} onClick={()=> setOpen(!open)} />
                 <img src={icon} className={styles.companyicon} alt='icon' />
                 <div className={styles.text}>CipherSchools</div>
                 <div className={`d-none d-lg-flex ${styles.browse}`}>

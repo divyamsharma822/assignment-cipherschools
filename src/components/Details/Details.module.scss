@@ -1,0 +1,142 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.Details {
+    background-color: #262c36;
+    height: calc(100vh - 60px);
+    width: 100%;
+    color: aliceblue;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    .headerwrapper {
+        background-image: url(../../assests/bg.png);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-color: #202b47d0;
+        background-size: cover;
+        height: 90px;
+        width: 100%;
+        border-bottom: 1px solid #3c424a;
+        position: sticky;
+        @media only screen and (min-width: 1025px) {
+            height: 110px;
+        }
+        .header {
+            background: linear-gradient(
+                to right,
+                #262c36,
+                transparent,
+                #262c36
+            );
+            height: 100%;
+            padding: 0.5em 1em 0.5em 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+
+            @media only screen and (max-width: 1025px) {
+                padding: 0 10px;
+                font-size: 14px;
+            }
+
+            .info {
+                display: flex;
+                align-items: center;
+                .profilepic {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(255, 255, 255, 0.368);
+                    width: min-content;
+                    border-radius: 100%;
+                    aspect-ratio: 1/1;
+                    height: 70px;
+                    width: 70px;
+                    margin: 10px 30px;
+                    @media only screen and (max-width: 1025px) {
+                        margin: 10px;
+                        height: 55px;
+                        width: 55px;
+                    }
+                    .editicon {
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        bottom: -15px;
+                        background-color: #202b47;
+                        border-radius: 50%;
+                        height: 30px;
+                        width: 30px;
+                        cursor: pointer;
+                    }
+                }
+                .detail {
+                    font-size: 1em;
+                    &:nth-child(2) {
+                        font-weight: 700;
+                    }
+                    &:nth-child(3) {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+            .followingcount {
+                @media only screen and (max-width: 500px) {
+                    display: none;
+                }
+            }
+        }
+    }
+    .scrollArea {
+        display: flex;
+        justify-content: space-between;
+        background-color: #15181e;
+        height: 100%;
+        overflow-y: scroll;
+
+        .rightbar {
+
+            .arrow {
+                background-color: #262c36;
+                padding: 5px;
+                border-radius: 5px 0 0 5px;
+                cursor: pointer;
+            }
+
+            .optionbar {
+                height: 100%;
+                background-color: #262c36;
+                .list {
+                    border-radius: 10px;
+                    color: #eeeeee;
+                    &:hover {
+                        background-color: #f3902e29;
+                        cursor: pointer;
+                    }
+                    .open {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 1em;
+                        font-weight: 600;
+
+                        svg {
+                            height: 20px;
+                        }
+                    }
+                    .closed {
+                        font-size: 10px;
+                        text-align: center;
+                        font-weight: 600;
+                        word-wrap: break-word;
+                    }
+                }
+            }
+        }
+    }
+}

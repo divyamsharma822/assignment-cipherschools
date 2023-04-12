@@ -1,12 +1,15 @@
 .Navbar {
-    background-color: black;
     height: 60px;
     background-color: #262c36;
+    border-bottom: 1px solid #3c424a;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1em;
-    position: sticky;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
     @media (min-width: 1440px) {
         font-size: calc(14px + 0.4vw);
     }
