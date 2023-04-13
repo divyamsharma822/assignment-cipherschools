@@ -98,45 +98,16 @@
         justify-content: space-between;
         background-color: #15181e;
         height: 100%;
-        overflow-y: scroll;
-
-        .rightbar {
-
-            .arrow {
-                background-color: #262c36;
-                padding: 5px;
-                border-radius: 5px 0 0 5px;
-                cursor: pointer;
-            }
-
-            .optionbar {
-                height: 100%;
-                background-color: #262c36;
-                .list {
-                    border-radius: 10px;
-                    color: #eeeeee;
-                    &:hover {
-                        background-color: #f3902e29;
-                        cursor: pointer;
-                    }
-                    .open {
-                        display: flex;
-                        flex-direction: row;
-                        gap: 1em;
-                        font-weight: 600;
-
-                        svg {
-                            height: 20px;
-                        }
-                    }
-                    .closed {
-                        font-size: 10px;
-                        text-align: center;
-                        font-weight: 600;
-                        word-wrap: break-word;
-                    }
-                }
-            }
+        padding-left: 90px;
+        @media only screen and (max-width: 1025px) {
+            padding: 0;
         }
+        .content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: scroll;
+        }
+        
     }
 }

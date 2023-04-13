@@ -1,0 +1,33 @@
+.CipherMap {
+    padding: 0 15px;
+    font-size: 14px;
+    width: 100%;
+    overflow: scroll;
+
+    @media only screen and (min-width: 1025px) {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    .heading {
+        color: #eeeeee;
+        font-size: 1em;
+        font-weight: 700;
+    }
+
+    .indicator {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        @media only screen and (min-width: 1025px) {
+            margin-top: -30px;
+        }
+        width: 100%;
+        gap: 5px;
+    }
+    .hr {
+        border-bottom: 1px solid #2d3035;
+        margin: 10px 0;
+    }
+}

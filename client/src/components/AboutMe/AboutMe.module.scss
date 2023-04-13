@@ -1,0 +1,71 @@
+.Aboutme {
+    padding: 15px;
+    font-size: 14px;
+    @media only screen and (min-width: 1025px) {
+        font-size: 16px;
+        padding: 20px 20px 0 20px;
+    }
+    width: 100%;
+
+    .header {
+        display: flex;
+        align-items: center;
+
+        .heading {
+            color: #eeeeee;
+            font-size: 1em;
+            font-weight: 700;
+        }
+        button {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            color: white;
+            background-color: #f3912e;
+            border-radius: 5px;
+            padding: 4px 25px;
+            font-size: 0.9em;
+            border: none;
+
+            &:disabled {
+                border: 1px solid #626262;
+                color: #626262;
+                cursor: wait;
+            }
+
+            &:hover {
+                background-color: #f3902e9d;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .formWrapper {
+        margin-top: 10px;
+        .inputComponent {
+            margin: 0.5em 0;
+            .input {
+                width: 100%;
+                margin: 0;
+                border: none;
+                color: #757575;
+                border-radius: 10px;
+                padding: 1em;
+                background-color: #262c36;
+                font-size: 0.9em;
+                resize: none;
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+            .error {
+                color: red;
+            }
+        }
+        .hr{
+            border-bottom: 1px solid #2d3035;
+            margin: 10px 0;
+        }
+    }
+}
