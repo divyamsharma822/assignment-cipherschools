@@ -55,6 +55,7 @@ const RightBar = () => {
                                 ? {
                                       margin: "5px 10px",
                                       transition: "all 0.2s ease-in-out",
+                                      width:"200px"
                                   }
                                 : {
                                       margin: "5px",

@@ -3,6 +3,8 @@ import { MdModeEditOutline } from "react-icons/md";
 import { RxAvatar } from "react-icons/rx";
 import AboutMe from "../AboutMe/AboutMe";
 import CipherMap from "../CipherMap/CipherMap";
+import Ontheweb from "../Ontheweb/Ontheweb";
+import ProfessionalInfo from "../ProfessionalInfo/ProfessionalInfo";
 import RightBar from "../RightBar/RightBar";
 import styles from "./Details.module.scss";
 
@@ -34,6 +36,8 @@ const Details = () => {
                 <div className={styles.content}>
                     <AboutMe />
                     <CipherMap />
+                    <Ontheweb />
+                    <ProfessionalInfo />
                 </div>
                 <RightBar />
             </div>

@@ -1,38 +1,41 @@
 import React, { useState } from "react";
-import styles from "./Ontheweb.module.scss";
+import styles from "./ProfessionalInfo.module.scss";
 import { useField, Form, Formik } from "formik";
-import { ReactComponent as LinkedInLogo } from "../../assests/linkedin.svg";
-import { ReactComponent as Editlogo } from "../../assests/edit.svg";
-import { ReactComponent as GithubLogo } from "../../assests/github.svg";
-import { ReactComponent as FacebookLogo } from "../../assests/facebook.svg";
-import { ReactComponent as TwitterLogo } from "../../assests/twitter.svg";
-import { ReactComponent as InstagramLogo } from "../../assests/instagram.svg";
+import { ReactComponent as Arrowdowndropdown } from "../../assests/arrowdowndropdown.svg";
 
-const Ontheweb = () => {
+const ProfessionalInfo = () => {
     const [editable, setEditable] = useState(false);
+    const [open1, setOpen1] = useState(false);
 
-    const TextField = ({ label,Icon, initialValue, ...props }) => {
+    const TextField = ({ label, initialValue, ...props }) => {
         const [field, meta] = useField(props);
 
         return (
             <>
                 <div
-                    className={`col-md-6 col-lg-4 d-flex flex-column align-items-start ${styles.inputComponent}`}>
+                    className={`col-md-6 d-flex flex-column align-items-start ${styles.inputComponent}`}>
                     <div className={styles.label}>{label}</div>
-                    <div
-                        className={`d-flex flex-column w-100 ${styles.space}`}>
-                        <div className={`d-flex align-items-center px-3 ${styles.inputwrapper}`}>
-                            <Icon />
+                    <div className={`d-flex flex-column w-100 ${styles.space}`}>
+                        <div
+                            className={`d-flex align-items-center px-3 ${styles.inputwrapper}`} onClick={()=> setOpen1(!open1)}>
                             <input
                                 {...field}
                                 {...props}
                                 placeholder={label}
                                 className={styles.input}
                                 value={meta.value}
-                                disabled={!editable}
+                                disabled={true}
                             />
-                            {editable && <Editlogo/>}
+                            <Arrowdowndropdown />
                         </div>
+                        {open1 && (
+                            <div className={styles.options}>
+                                <div className={styles.option}>Primary</div>
+                                <div className={styles.option}>Primary</div>
+                                <div className={styles.option}>Primary</div>
+                                <div className={styles.option}>Primary</div>
+                            </div>
+                        )}
 
                         {meta.touched && meta.error ? (
                             <div className={styles.error}>{meta.error}</div>
@@ -56,7 +59,7 @@ const Ontheweb = () => {
                 {(props) => (
                     <Form>
                         <div
-                            className={`${styles.Ontheweb}`}
+                            className={`${styles.ProfessionalInfo}`}
                             style={{
                                 cursor: props.isSubmitting ? "wait" : "auto",
                             }}>
@@ -64,7 +67,7 @@ const Ontheweb = () => {
                             <div
                                 className={`d-flex justify-content-between flex-row ${styles.header}`}>
                                 <div className={`${styles.heading}`}>
-                                    ABOUT ME
+                                    PROFESSIONAL INFORMATION
                                 </div>
                                 {editable === false && (
                                     <button
@@ -90,38 +93,12 @@ const Ontheweb = () => {
                                 <TextField
                                     name='linkedin'
                                     type='text'
-                                    label='Linkedin'
-                                    Icon={LinkedInLogo}
+                                    label='Highest education'
                                 />
-                                 <TextField
+                                <TextField
                                     name='github'
                                     type='text'
-                                    label='Github'
-                                    Icon={GithubLogo}
-                                />
-                                 <TextField
-                                    name='facebook'
-                                    type='text'
-                                    label='Facebook'
-                                    Icon={FacebookLogo}
-                                />
-                                 <TextField
-                                    name='twitter'
-                                    type='text'
-                                    label='Twitter'
-                                    Icon={TwitterLogo}
-                                />
-                                 <TextField
-                                    name='about'
-                                    type='text'
-                                    label='LinkedIn'
-                                    Icon={InstagramLogo}
-                                />
-                                 <TextField
-                                    name='about'
-                                    type='text'
-                                    label='LinkedIn'
-                                    Icon={LinkedInLogo}
+                                    label='What do you do currently?'
                                 />
                                 <div className={styles.hr}></div>
                             </div>
@@ -133,4 +110,4 @@ const Ontheweb = () => {
     );
 };
 
-export default Ontheweb;
+export default ProfessionalInfo;
